@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Tic Tac Toe </title>
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="./script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section id="home-screen">
+            <div id="home-card">
+            <div id="tic">
+                <h1> <span class="tic-title" >TIC</span>
+                    <span class="tac-title">TAC</span>
+                    <span class="toe-title"> TOE</span></h1>
+                <h3> SOLO OR DUO </h3>
+                <hr>
+            </div>
+            <div id="choose">
+                <p> Choose your game mode </p>
+                <button id="button1" class="players">
+                    <div class="player">
+                        <img src="./assets/gamepad-svgrepo-com.svg" alt="gamepad"/>
+                        <div class="text">
+                            <h2> Single Player</h2>
+                            <p> Play against computer</p>
+                        </div>
+                    </div>
+                </button>
+                <button id="button2" class="players">
+                    <div class="player">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="text">
+                            <h2> Two Players</h2>
+                            <p> Play with a friend</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            </div>
+        </section>
+        <section id="single-player">
+            <div id="header">
+                <i class="fa-solid fa-robot"></i>
+                <h1> Single Player</h1>
+                <p> Enter your details to start</p>
+            </div>
+            <div id="single-card">
+            <div class="enter">
+                <p> Your Name </p>
+                <input id="name" name="name" type="text" 
+                placeholder='Enter your name...'/>
+                <p> Choose Your Symbol</p>
+                <div id="choices">
+                    <button class="xicon choice selected">
+                        <i id="x-icon" class="fa-solid fa-x"></i>
+                        <h3> X</h3>
+                        <p> (You)</p>
+                    </button>
+                    <button class=" oicon choice selected">
+                        <i id="o-icon" class="fa-solid fa-o selected"></i>
+                        <h3> O</h3>
+                        <p> (Computer)</p>
+                    </button>
+                </div>
+                <div id="start">
+                <button> <i class="fa-solid fa-play"></i>&nbsp;&nbsp; <span>Start Game</span></button>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="two-players">
+            <div id="headers">
+                <i class="fa-solid fa-users"></i>
+                <h1> Two Players </h1>
+                <p> Enter player names</p>
+            </div>
+            <div id="boxes">
+                <div class="box">
+                    <div class="names">
+                        <i class=" x-names fa-solid fa-x"></i> 
+                        <p>Player 1</p>
+                    </div>
+                    <input type="text" name="player1" id="player1-name" placeholder="Enter player 1 name..."/>
+                </div>
+                <div class="box">
+                    <div class="names">
+                        <i class=" o-names fa-solid fa-o"></i> 
+                        <p>Player 2</p>
+                    </div>
+                    <input type="text" name="player2" id="player2-name" placeholder="Enter player 2 name..."/>
+                </div>
+            </div>
+            <div id="players-start">
+                <button> <i class="fa-solid fa-play"></i>&nbsp;&nbsp; <span>Start Game</span></button>
+            </div>
+        </section>
+        <section id="single-main-game">
+            <div id="main-head">
+                <h2> 
+                    <span class="tic-title">TIC</span>
+                    <span class="tac-title">TAC</span>
+                    <span class="toe-title">TOE</span>
+                </h2>
+            </div>
+            <div id="scores">
+                <div class="score" id="your-score">
+                    <i class="fa-solid fa-x"></i>
+                    <div class="scor">
+                        <h3> You</h3>
+                        <p> 0 </p>
+                    </div>
+                </div>
+                <div class="score" id="comp-score">
+                    <i class="fa-solid fa-o"></i>
+                    <div class="scor">
+                        <h3> Computer </h3>
+                        <p> 0 </p>
+                    </div>
+                </div>
+            </div>
+            <div id="turns">
+
+            </div>
+            <div id="game-boxes">
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+                <div class="game-box"></div>
+            </div>
+            <div id="rounds"></div>
+            <div id="bottoms">
+                <button class="bottom">
+                    <i class="fa-solid fa-rotate"></i>
+                    <p> Restart </p>
+                </button>
+                <button class="bottom">
+                    <i class="fa-solid fa-house"></i>
+                    <p> Menu </p>
+                </button>
+            </div>
+        </section>
+        <section id="two-main-game">
+            <div id="two-main-head">
+                <h2> 
+                    <span class="tic-title">TIC</span>
+                    <span class="tac-title">TAC</span>
+                    <span class="toe-title">TOE</span>
+                </h2>
+            </div>
+            <div id="two-scores">
+                <div class="two-score" id="two-your-score">
+                    <i class="fa-solid fa-x"></i>
+                    <div class="two-scor">
+                        <h3> Player 1</h3>
+                        <p> 0 </p>
+                    </div>
+                </div>
+                <div class="two-score" id="two-comp-score">
+                    <i class="fa-solid fa-o"></i>
+                    <div class="two-scor">
+                        <h3> Player 2 </h3>
+                        <p> 0 </p>
+                    </div>
+                </div>
+            </div>
+            <div id="two-turns">
+
+            </div>
+            <div id="two-game-boxes">
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+                <div class="two-game-box"></div>
+            </div>
+            <div id="two-rounds"></div>
+            <div id="two-bottoms">
+                <button class="two-bottom">
+                    <i class="fa-solid fa-rotate"></i>
+                    <p> Restart </p>
+                </button>
+                <button class="two-bottom">
+                    <i class="fa-solid fa-house"></i>
+                    <p> Menu </p>
+                </button>
+            </div>
+        </section>
+        <section id="restart-sec">
+            <div id="restart-card">
+                <i class="fa-solid fa-rotate"></i>
+                <h3> Restart Round&nbsp;?</h3>
+                <p> Your current round will<br> start from zero.</p>
+                <div id="restart-btn">
+                    <button id="cancel"> Cancel</button>
+                    <button id="restart-touch"> Restart </button>
+                </div>
+            </div>
+        </section>
+        <section id="reset-sec">
+            <div id="reset-card">
+                <i class="fa-solid fa-trash-can"></i>
+                <h3> Reset Game&nbsp;?</h3>
+                <p> This will clear all scores and<br> start a new game.</p>
+                <div id="reset-btn">
+                    <button id="cancel-reset"> Cancel</button>
+                    <button id="reset-touch">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <p> Reset </p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
