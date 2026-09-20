@@ -55,12 +55,12 @@
                 placeholder='Enter your name...'/>
                 <p> Choose Your Symbol</p>
                 <div id="choices">
-                    <button class="xicon choice selected">
+                    <button id="xicon" class="xicon choice">
                         <i id="x-icon" class="fa-solid fa-x"></i>
                         <h3> X</h3>
                         <p> (You)</p>
                     </button>
-                    <button class=" oicon choice selected">
+                    <button id="oicon" class=" oicon choice">
                         <i id="o-icon" class="fa-solid fa-o selected"></i>
                         <h3> O</h3>
                         <p> (Computer)</p>
@@ -82,14 +82,14 @@
                 <div class="box">
                     <div class="names">
                         <i class=" x-names fa-solid fa-x"></i> 
-                        <p>Player 1</p>
+                        <p> Player 1</p>
                     </div>
-                    <input type="text" name="player1" id="player1-name" placeholder="Enter player 1 name..."/>
+                    <input  type="text" name="player1" id="player1-name" placeholder="Enter player 1 name..."/>
                 </div>
                 <div class="box">
                     <div class="names">
                         <i class=" o-names fa-solid fa-o"></i> 
-                        <p>Player 2</p>
+                        <p> Player 2</p>
                     </div>
                     <input type="text" name="player2" id="player2-name" placeholder="Enter player 2 name..."/>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="score" id="your-score">
                     <i class="fa-solid fa-x"></i>
                     <div class="scor">
-                        <h3> You</h3>
+                        <h3 id="you"> You </h3>
                         <p> 0 </p>
                     </div>
                 </div>
@@ -138,11 +138,11 @@
             </div>
             <div id="rounds"></div>
             <div id="bottoms">
-                <button class="bottom">
+                <button id="restart-bottom" class="bottom">
                     <i class="fa-solid fa-rotate"></i>
                     <p> Restart </p>
                 </button>
-                <button class="bottom">
+                <button id="menu-bottom" class="bottom">
                     <i class="fa-solid fa-house"></i>
                     <p> Menu </p>
                 </button>
@@ -160,14 +160,14 @@
                 <div class="two-score" id="two-your-score">
                     <i class="fa-solid fa-x"></i>
                     <div class="two-scor">
-                        <h3> Player 1</h3>
+                        <h3 id="player1"> Player 1</h3>
                         <p> 0 </p>
                     </div>
                 </div>
                 <div class="two-score" id="two-comp-score">
                     <i class="fa-solid fa-o"></i>
                     <div class="two-scor">
-                        <h3> Player 2 </h3>
+                        <h3 id="player2"> Player 2</h3>
                         <p> 0 </p>
                     </div>
                 </div>
@@ -188,11 +188,11 @@
             </div>
             <div id="two-rounds"></div>
             <div id="two-bottoms">
-                <button class="two-bottom">
+                <button id="restart-two-bottom" class="two-bottom">
                     <i class="fa-solid fa-rotate"></i>
                     <p> Restart </p>
                 </button>
-                <button class="two-bottom">
+                <button id="menu-two-bottom" class="two-bottom">
                     <i class="fa-solid fa-house"></i>
                     <p> Menu </p>
                 </button>
