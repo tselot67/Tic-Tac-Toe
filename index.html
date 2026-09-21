@@ -161,14 +161,14 @@
                     <i class="fa-solid fa-x"></i>
                     <div class="two-scor">
                         <h3 id="player1"> Player 1</h3>
-                        <p> 0 </p>
+                        <p id="player1-score"> 0 </p>
                     </div>
                 </div>
                 <div class="two-score" id="two-comp-score">
                     <i class="fa-solid fa-o"></i>
                     <div class="two-scor">
                         <h3 id="player2"> Player 2</h3>
-                        <p> 0 </p>
+                        <p id="player2-score"> 0 </p>
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                 <div class="two-game-box"></div>
                 <div class="two-game-box"></div>
             </div>
-            <div id="two-rounds"></div>
+            <div id="two-rounds"> Round 1</div>
             <div id="two-bottoms">
                 <button id="restart-two-bottom" class="two-bottom">
                     <i class="fa-solid fa-rotate"></i>
@@ -223,5 +223,115 @@
                 </div>
             </div>
         </section>
+        <section id="playercongra">
+            <div id="player-win-display">
+                <i class="fa-solid fa-trophy"></i>
+                <h2> PLAYER WIN</h2>
+            </div>
+            <div id="score-card">
+                <div id="score-display">
+                    <div>
+                        <h3 id="player-score"></h3>
+                        <p> Player 1 Score</p>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <h3 id="player2-score"></h3>
+                        <p> Player 2 Score</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button id="play-again">
+                        <i class="fa-solid fa-rotate"></i>
+                        <p> Play Again</p>
+                    </button>
+                    <button id="main-menu">
+                        <i class="fa-solid fa-home"></i>
+                        <p> Main Menu</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="draw-sec">
+            <div id="draw-display-card">
+                <div id="draw-head">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h2> DRAW</h2>
+                    <p> No one wins the round</p>
+                </div>
+                <div id="draw-display">
+                    <div>
+                        <h3 id="player-score"></h3>
+                        <p> Player 1 Score</p>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <h3 id="player2-score"></h3>
+                        <p> Player 2 Score</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button id="play-again">
+                        <i class="fa-solid fa-rotate"></i>
+                        <p> Play Again</p>
+                    </button>
+                    <button id="main-menu">
+                        <i class="fa-solid fa-home"></i>
+                        <p> Main Menu</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="lose-sec">
+    <div id="lose-display-card">
+
+        <div id="lose-head">
+            <i class="fa-solid fa-face-sad-tear"></i>
+            <h2>YOU LOSE</h2>
+            <p>Computer wins the game</p>
+        </div>
+
+        <div id="lose-display">
+
+            <div>
+                <h3 id="you-lose-score"></h3>
+                <p>Your Score</p>
+            </div>
+
+            <div>
+                <hr>
+            </div>
+
+            <div>
+                <h3 id="computer-lose-score"></h3>
+                <p>Computer Score</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div id="lose-buttons">
+
+            <button id="lose-play-again">
+                <i class="fa-solid fa-rotate"></i>
+                <p>Play Again</p>
+            </button>
+
+            <button id="lose-main-menu">
+                <i class="fa-solid fa-home"></i>
+                <p>Main Menu</p>
+            </button>
+
+        </div>
+
+    </div>
+</section>
     </body>
 </html>
