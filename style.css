@@ -455,6 +455,7 @@ body {
 #game-boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     border: 1px solid #1846a3;
     width: 30%;
     height: 300px;
@@ -462,12 +463,18 @@ body {
     padding: 10px;
     border-radius: 10px;
     background: #0b1026;
+    box-sizing: border-box;
 }
 .game-box {
     text-align: center;
     border: 1px solid #1846a3;
     border-radius: 10px;
     background: #111936;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
 }
 #bottoms {
     display: flex;
@@ -779,18 +786,24 @@ body {
 
 
 .current-player-x {
-    font-size: 53px;
     font-family: Arial, sans-serif;
     font-weight: 900;
     color: #2196FF;
     text-shadow: 0 0 12px rgba(33, 150, 255, 0.7);
 }
 .current-player-o {
-    font-size: 53px;
     font-family: Arial, sans-serif;
     font-weight: 900;
     color: #D946EF;
     text-shadow: 0 0 12px rgba(217, 70, 239, 0.7); 
+}
+.game-box {
+    font-size: 53px;
+    box-sizing: border-box;
+}
+.two-game-box {
+    font-size: 53px;
+    box-sizing: border-box;
 }
 
 
@@ -828,7 +841,23 @@ body {
     font-weight: bold;
 }
 
+.you-win {
+    font-size: 23px;
+    color: green;
+    font-weight: bold;
+}
+
+.computer-win {
+    font-size: 23px;
+    color: red;
+    font-weight: bold;
+}
 #two-rounds {
+    font-size: 25px;
+    font-weight: bold;
+    color: #926cf8;
+}
+#rounds {
     font-size: 25px;
     font-weight: bold;
     color: #926cf8;
@@ -836,8 +865,9 @@ body {
 
 
 
+
 #playercongra {
-    display: flex;
+    display: none;
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, #0B1026, #171044);
@@ -846,20 +876,16 @@ body {
     flex-direction: column;
     padding: 30px 20px;
 }
-
-/* WIN DISPLAY */
 #player-win-display {
     text-align: center;
     margin-bottom: 25px;
 }
-
 #player-win-display i {
     font-size: 65px;
     color: #FFD700;
     margin-bottom: 15px;
     filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5));
 }
-
 #player-win-display h2 {
     margin: 0;
     color: yellow;
@@ -868,8 +894,6 @@ body {
     letter-spacing: 2px;
     margin-top: 20px;
 }
-
-/* SCORE CARD */
 #score-card {
     width: 420px;
     max-width: 100%;
@@ -879,49 +903,38 @@ body {
     padding: 25px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
-
-/* SCORE DISPLAY */
 #score-display {
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
 }
-
 #score-display h3 {
     margin: 0;
     color: #F1F5F9;
     font-size: 35px;
     font-weight: 800;
 }
-
 #score-display p {
     margin-top: 7px;
     color: #94A3B8;
     font-size: 13px;
 }
-
 #score-display hr {
     height: 45px;
     border: none;
     border-left: 1px solid #475569;
 }
-
-/* CARD LINE */
 #score-card > hr {
     border: none;
     border-top: 1px solid #3949AB;
     margin: 25px 0;
 }
-
-/* BUTTON CONTAINER */
 #score-card > div:last-child {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
-/* BUTTONS */
 #score-card button {
     width: 100%;
     border: none;
@@ -933,46 +946,36 @@ body {
     font-weight: 600;
     transition: 0.25s ease;
 }
-
-/* PLAY AGAIN */
 #play-again {
     background: #FFD700;
     color: black;
     box-shadow: 0 5px 15px rgba(33, 150, 255, 0.25);
 }
-
-/* MAIN MENU */
 #main-menu {
     background: #27345F;
     color: #F1F5F9;
 }
-
-/* BUTTON ICONS */
 #score-card button i {
     margin-right: 7px;
 }
-
-/* BUTTON TEXT */
 #score-card button p {
     display: inline;
     margin: 0;
 }
-
-/* HOVER */
 #score-card button:hover {
     transform: translateY(-2px);
 }
-
 #play-again:hover {
     box-shadow: 0 7px 20px rgba(33, 150, 255, 0.4);
 }
-
 #main-menu:hover {
     background: #344477;
 }
 
+
+
 #draw-sec {
-    display: flex;
+    display: none;
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, #0B1026, #171044);
@@ -980,8 +983,6 @@ body {
     justify-content: center;
     padding: 30px 20px;
 }
-
-/* DRAW CARD */
 #draw-display-card {
     width: 420px;
     max-width: 100%;
@@ -991,20 +992,16 @@ body {
     padding: 25px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
-
-/* DRAW HEADER */
 #draw-head {
     text-align: center;
     margin-bottom: 25px;
 }
-
 #draw-head i {
     font-size: 60px;
     color: #FBBF24;
     margin-bottom: 15px;
     filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.4));
 }
-
 #draw-head h2 {
     margin: 0;
     color: #FBBF24;
@@ -1012,56 +1009,43 @@ body {
     font-weight: 800;
     letter-spacing: 2px;
 }
-
 #draw-head p {
     margin-top: 8px;
     color: #CBD5E1;
     font-size: 16px;
 }
-
-/* SCORE DISPLAY */
 #draw-display {
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
 }
-
 #draw-display h3 {
     margin: 0;
     color: #F1F5F9;
     font-size: 35px;
     font-weight: 800;
 }
-
 #draw-display p {
     margin-top: 7px;
     color: #94A3B8;
     font-size: 13px;
 }
-
-/* VERTICAL LINE */
 #draw-display hr {
     height: 45px;
     border: none;
     border-left: 1px solid #475569;
 }
-
-/* HORIZONTAL LINE */
 #draw-display-card > hr {
     border: none;
     border-top: 1px solid #3949AB;
     margin: 25px 0;
 }
-
-/* BUTTON CONTAINER */
 #draw-display-card > div:last-child {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
-/* BUTTONS */
 #draw-display-card button {
     width: 100%;
     border: none;
@@ -1073,45 +1057,35 @@ body {
     font-weight: 600;
     transition: 0.25s ease;
 }
-
-/* PLAY AGAIN */
 #draw-play-again {
     background: #2196FF;
     color: #FFFFFF;
 }
-
-/* MAIN MENU */
 #draw-main-menu {
     background: #27345F;
     color: #F1F5F9;
 }
-
-/* BUTTON ICONS */
 #draw-display-card button i {
     margin-right: 7px;
 }
-
-/* BUTTON TEXT */
 #draw-display-card button p {
     display: inline;
     margin: 0;
 }
-
-/* HOVER */
 #draw-display-card button:hover {
     transform: translateY(-2px);
 }
-
 #draw-play-again:hover {
     box-shadow: 0 7px 20px rgba(33, 150, 255, 0.4);
 }
-
 #draw-main-menu:hover {
     background: #344477;
 }
 
+
+
 #lose-sec {
-    display: flex;
+    display: none;
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(
@@ -1124,10 +1098,6 @@ body {
     justify-content: center;
     padding: 30px 20px;
 }
-
-
-/* LOSE CARD */
-
 #lose-display-card {
     width: 420px;
     max-width: 100%;
@@ -1140,15 +1110,10 @@ body {
         0 0 15px rgba(239, 68, 68, 0.18),
         0 15px 40px rgba(0, 0, 0, 0.45);
 }
-
-
-/* LOSE HEADER */
-
 #lose-head {
     text-align: center;
     margin-bottom: 25px;
 }
-
 #lose-head i {
     font-size: 65px;
     color: #EF4444;
@@ -1158,7 +1123,6 @@ body {
         drop-shadow(0 0 8px rgba(239, 68, 68, 0.6))
         drop-shadow(0 0 18px rgba(239, 68, 68, 0.3));
 }
-
 #lose-head h2 {
     margin: 0;
     color: #FF4D5A;
@@ -1169,128 +1133,99 @@ body {
     text-shadow:
         0 0 10px rgba(239, 68, 68, 0.5);
 }
-
 #lose-head p {
     margin-top: 8px;
     color: #FCA5A5;
     font-size: 16px;
 }
-
-
-/* SCORE DISPLAY */
-
 #lose-display {
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
 }
-
 #lose-display h3 {
     margin: 0;
     color: #F1F5F9;
     font-size: 35px;
     font-weight: 800;
 }
-
 #lose-display p {
     margin-top: 7px;
     color: #94A3B8;
     font-size: 13px;
 }
-
-
-/* VERTICAL LINE */
-
 #lose-display hr {
     height: 45px;
     border: none;
     border-left: 1px solid #7F1D1D;
 }
-
-
-/* HORIZONTAL LINE */
-
 #lose-display-card > hr {
     border: none;
     border-top: 1px solid #7F1D1D;
     margin: 25px 0;
 }
-
-
-/* BUTTON CONTAINER */
-
 #lose-buttons {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
-
-/* ALL BUTTONS */
-
 #lose-buttons button {
     width: 100%;
     border: none;
     border-radius: 10px;
     padding: 14px;
-
     cursor: pointer;
-
     font-family: inherit;
     font-size: 15px;
     font-weight: 600;
-
     transition: 0.25s ease;
 }
-
-
-/* PLAY AGAIN */
-
 #lose-play-again {
     background: #DC2626;
     color: #FFFFFF;
-
     box-shadow:
         0 5px 15px rgba(220, 38, 38, 0.25);
 }
-
 #lose-play-again:hover {
     background: #EF4444;
-
     box-shadow:
         0 7px 22px rgba(239, 68, 68, 0.45);
-
     transform: translateY(-2px);
 }
-
-
-/* MAIN MENU */
-
 #lose-main-menu {
     background: #301B2A;
     color: #F1F5F9;
     border: 1px solid #7F1D1D !important;
 }
-
 #lose-main-menu:hover {
     background: #451F2A;
     border-color: #EF4444 !important;
     transform: translateY(-2px);
 }
-
-
-/* BUTTON ICONS */
-
 #lose-buttons button i {
     margin-right: 7px;
 }
-
-
-/* BUTTON TEXT */
-
 #lose-buttons button p {
     display: inline;
     margin: 0;
 }
+
+
+
+#player-congra,
+#draw-sec,
+#lose-sec {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(5, 10, 30, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+}
+
 
