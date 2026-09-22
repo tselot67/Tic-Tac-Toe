@@ -6,6 +6,7 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+/* This is home section style*/
 #home-screen {
     display: flex;
     flex-direction: column;
@@ -119,7 +120,7 @@ body {
     border-color: #926cf8;
 }
 
-
+/* This is single player section style*/
 #single-player {
     display: flex;
     flex-direction: column;
@@ -264,7 +265,7 @@ body {
 }
 
 
-
+/* This is two player section style*/
 #two-players {
     display: flex;
     flex-direction: column;
@@ -375,7 +376,7 @@ body {
 }
 
 
-
+/* This is single game section style*/
 #single-main-game {
     display: flex;
     flex-direction: column;
@@ -512,7 +513,7 @@ body {
 }
 
 
-
+/* This is two game section style*/
 #two-main-game {
     display: flex;
     flex-direction: column;
@@ -643,7 +644,7 @@ body {
 
 
 
-
+/* This is restart section style*/
 #restart-sec {
     display: flex;
     flex-direction: column;
@@ -712,7 +713,7 @@ body {
 }
 
 
-
+/* This is reset section style*/
 #reset-sec {
     display: flex;
     flex-direction: column;
@@ -865,7 +866,7 @@ body {
 
 
 
-
+/* This is winning section style*/
 #playercongra {
     display: none;
     min-height: 100vh;
@@ -973,7 +974,7 @@ body {
 }
 
 
-
+/* This is draw section style*/
 #draw-sec {
     display: none;
     min-height: 100vh;
@@ -1083,7 +1084,7 @@ body {
 }
 
 
-
+/* This is lose section style*/
 #lose-sec {
     display: none;
     min-height: 100vh;
