@@ -1229,3 +1229,422 @@ body {
 }
 
 
+
+
+/* Responsive Design*/
+@media (max-width: 900px) {
+    #home-card {
+        width: 85%;
+        max-width: 400px;
+        padding: 35px 25px;
+    }
+    .players {
+        width: 90%;
+    }
+    #single-card {
+        width: 85%;
+        max-width: 400px;
+    }
+    .box {
+        width: 85%;
+        max-width: 400px;
+    }
+    #players-start > button {
+        width: 40%;
+    }
+    #game-boxes {
+        width: 45%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    #bottoms {
+        width: 46%;
+        max-width: 350px;
+    }
+    #two-game-boxes {
+        width: 45%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    #two-bottoms {
+        width: 46%;
+        max-width: 350px;
+    }
+    #score-card,
+    #draw-display-card,
+    #lose-display-card {
+        width: 70%;
+        max-width: 420px;
+    }
+    #restart-card,
+    #reset-card {
+        width: 60%;
+        max-width: 420px;
+    }
+}
+/*Phones*/
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    #home-screen {
+        min-height: 100vh;
+        padding: 20px;
+        gap: 20px;
+        background-position: center;
+    }
+    #home-card {
+        width: 100%;
+        max-width: 370px;
+        padding: 30px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 18px;
+    }
+    #tic > h1 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    #tic > hr {
+        width: 60px;
+        margin-top: 12px;
+        margin-bottom: 22px;
+    }
+    #tic > h3 {
+        font-size: 15px;
+    }
+    #choose {
+        width: 100%;
+        gap: 15px;
+    }
+    #choose > p {
+        font-size: 14px;
+    }
+    .players {
+        width: 100%;
+        height: 75px;
+    }
+    .player {
+        gap: 15px;
+    }
+    .player > i {
+        font-size: 25px;
+    }
+    .text h3 {
+        font-size: 15px;
+    }
+    .text p {
+        font-size: 12px;
+    }
+    #single-player {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    #header > i {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    #header > h1 {
+        font-size: 30px;
+    }
+    #header > p {
+        font-size: 13px;
+        text-align: center;
+    }
+    #single-card {
+        width: 100%;
+        max-width: 370px;
+        height: auto;
+        min-height: 400px;
+        padding-bottom: 25px;
+    }
+    .enter > p {
+        padding-left: 18px;
+        padding-top: 18px;
+    }
+    .enter > input {
+        width: calc(100% - 36px);
+        margin-left: 18px;
+    }
+    #choices {
+        gap: 12px;
+        margin-left: 0;
+        padding: 0 15px;
+    }
+    .choice {
+        width: 50%;
+        height: 135px;
+    }
+    #x-icon,
+    #o-icon {
+        font-size: 45px;
+        margin-bottom: 12px;
+    }
+    .choice > h3 {
+        font-size: 16px;
+    }
+    .choice > p {
+        font-size: 12px;
+    }
+    #start {
+        margin-top: 25px;
+    }
+    #start > button {
+        width: calc(100% - 36px);
+    }
+    #two-players {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    #headers > i {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    #headers > h1 {
+        font-size: 30px;
+    }
+    #headers > p {
+        font-size: 13px;
+        text-align: center;
+    }
+    #boxes {
+        width: 100%;
+    }
+    .box {
+        width: 100%;
+        max-width: 370px;
+        height: auto;
+        min-height: 140px;
+        padding-bottom: 20px;
+    }
+    .box > input {
+        width: calc(100% - 36px);
+        margin-left: 18px;
+    }
+    .names {
+        padding-left: 18px;
+    }
+    .x-names,
+    .o-names {
+        font-size: 32px;
+    }
+    .names > p {
+        font-size: 17px;
+    }
+    #players-start {
+        width: 100%;
+    }
+    #players-start > button {
+        width: 100%;
+        max-width: 370px;
+    }
+    #single-main-game {
+        padding: 30px 15px;
+        gap: 25px;
+    }
+    #main-head > h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    #scores {
+        width: 100%;
+        gap: 10px;
+    }
+    .score {
+        width: 45%;
+        max-width: 175px;
+        height: 70px;
+        gap: 10px;
+    }
+    #your-score > i,
+    #comp-score > i {
+        font-size: 38px;
+    }
+    .scor {
+        gap: 5px;
+    }
+    .scor > h3 {
+        font-size: 14px;
+    }
+    .scor > p {
+        font-size: 18px;
+    }
+    #game-boxes {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        gap: 7px;
+        padding: 7px;
+    }
+    .game-box {
+        font-size: 45px;
+        border-radius: 8px;
+    }
+    #bottoms {
+        width: 90%;
+        max-width: 350px;
+        gap: 10px;
+    }
+    .bottom {
+        height: 50px;
+        gap: 8px;
+    }
+    .bottom > i {
+        font-size: 17px;
+    }
+    .bottom > p {
+        font-size: 13px;
+    }
+    #two-main-game {
+        padding: 30px 15px;
+        gap: 25px;
+    }
+    #two-main-head > h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    #two-scores {
+        width: 100%;
+        gap: 10px;
+    }
+    .two-score {
+        width: 45%;
+        max-width: 175px;
+        height: 70px;
+        gap: 10px;
+    }
+    #two-your-score > i,
+    #two-comp-score > i {
+        font-size: 38px;
+    }
+    .two-scor {
+        gap: 5px;
+    }
+    .two-scor > h3 {
+        font-size: 14px;
+    }
+    .two-scor > p {
+        font-size: 18px;
+    }
+    #two-game-boxes {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        gap: 7px;
+        padding: 7px;
+    }
+    .two-game-box {
+        font-size: 45px;
+        border-radius: 8px;
+    }
+    #two-bottoms {
+        width: 90%;
+        max-width: 350px;
+        gap: 10px;
+    }
+    .two-bottom {
+        height: 50px;
+        gap: 8px;
+    }
+    .two-bottom > i {
+        font-size: 17px;
+    }
+    .two-bottom > p {
+        font-size: 13px;
+    }
+    #restart-card,
+    #reset-card {
+        width: calc(100% - 30px);
+        max-width: 370px;
+        height: auto;
+        min-height: 300px;
+        padding: 40px 20px;
+    }
+    #restart-card > i,
+    #reset-card > i {
+        font-size: 40px;
+    }
+    #restart-card > h3,
+    #reset-card > h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+    #restart-card > p,
+    #reset-card > p {
+        font-size: 15px;
+    }
+    #restart-btn,
+    #reset-btn {
+        width: 100%;
+        gap: 10px;
+    }
+    #restart-btn > button,
+    #reset-btn > button {
+        width: 45%;
+    }
+    #playercongra {
+        padding: 20px 15px;
+    }
+    #player-win-display i {
+        font-size: 55px;
+    }
+    #player-win-display h2 {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+    #score-card {
+        width: 100%;
+        max-width: 370px;
+        padding: 20px;
+    }
+    #score-display h3 {
+        font-size: 30px;
+    }
+    #draw-sec {
+        padding: 20px 15px;
+    }
+    #draw-display-card {
+        width: 100%;
+        max-width: 370px;
+        padding: 20px;
+    }
+    #draw-head i {
+        font-size: 52px;
+    }
+    #draw-head h2 {
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+    #draw-head p {
+        font-size: 14px;
+    }
+    #draw-display h3 {
+        font-size: 30px;
+    }
+    #lose-sec {
+        padding: 20px 15px;
+    }
+    #lose-display-card {
+        width: 100%;
+        max-width: 370px;
+        padding: 20px;
+    }
+    #lose-head i {
+        font-size: 55px;
+    }
+    #lose-head h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    #lose-head p {
+        font-size: 14px;
+    }
+    #lose-display h3 {
+        font-size: 30px;
+    }
+}
+
