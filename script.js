@@ -21,12 +21,27 @@ const singleStart = document.querySelector('#start button');
 const playerStart = document.querySelector('#players-start button');
 const inputName = document.getElementById('name');
 const player = document.getElementById('you');
+const player1 = document.getElementById('player1');
+const player2 = document.getElementById('player2');
 const xicon = document.querySelector('.xicon');
 const oicon = document.querySelector('.oicon');
+const player1Name = document.getElementById('player1-name');
+const player2Name = document.getElementById('player2-name');
+const oneScore = document.getElementById('pla1score');
+const twoScore = document.getElementById('pla2score');
 
 inputName.addEventListener('input', function () {
     player.textContent = inputName.value;
 });
+player1Name.addEventListener('input', function () {
+    player1.textContent = player1Name.value;
+    oneScore.innerHTML = `${player1Name.value} Score`;
+});
+player2Name.addEventListener('input', function () {
+    player2.textContent = player2Name.value;
+    twoScore.innerHTML = `${player2Name.value} Score`;
+});
+
 xicon.addEventListener('click', function () {
     xicon.classList.add('selected');
     oicon.classList.remove('selected');
@@ -284,17 +299,24 @@ function clearSingleBoard() {
         );
     });
     singleGameOver = false;
+    singleTurns.innerHTML = '';
+    singleTurns.classList.remove(
+        'draw',
+        'player1-wins',
+        'player2-wins'
+    );
 }
 
 
 function updateSingleRound() {
     singleRounds.textContent = `Round ${singleRound}`;
-    
+
 }
 
 
 function finishSingleRound() {
     if (singleRound === 3) {
+        checkFinalResultInSingle();
         return;
     }
     singleRound++;
@@ -466,21 +488,52 @@ function updateRound() {
 const playerCongra = document.getElementById('player-congra');
 const draw = document.getElementById('draw-sec');
 const lose = document.getElementById('lose-sec');
+const winner = document.getElementById('winner');
+const gamer1 = document.getElementById('gamer1');
+const gamer2 = document.getElementById('gamer2');
+const youLoseScore = document.getElementById('you-lose-score');
+const computerLoseScore = document.getElementById('computer-lose-score');
 function checkFinalResult() {
     if (player1Score > player2Score) {
         playerCongra.style.display = 'flex';
         draw.style.display = 'none';
         lose.style.display = 'none';
+        winner.textContent = `${player1Name.value} Win`;
     } else if (player2Score > player1Score) {
-        playerCongra.style.display = 'none';
+        playerCongra.style.display = 'flex';
         draw.style.display = 'none';
-        lose.style.display = 'flex';
+        lose.style.display = 'none';
+        winner.textContent = `${player2Name.value} Win`;
     } else {
         playerCongra.style.display = 'none';
         draw.style.display = 'flex';
         lose.style.display = 'none';
     }
+    gamer1.textContent = player1Score;
+    gamer2.textContent = player2Score;
 }
+
+
+function checkFinalResultInSingle() {
+    if (singlePlayerScore > computerScore) {
+        playerCongra.style.display = 'flex';
+        draw.style.display = 'none';
+        lose.style.display = 'none';
+    } else if (computerScore > singlePlayerScore) {
+        lose.style.display = 'flex';
+        draw.style.display = 'none';
+        playerCongra.style.display = 'none';
+    } else {
+        playerCongra.style.display = 'none';
+        draw.style.display = 'flex';
+        lose.style.display = 'none';
+    }
+    youLoseScore.textContent = singlePlayerScore;
+    computerLoseScore.textContent = computerScore;
+}
+
+
+
 
 const playAgain = document.getElementById('play-again');
 const mainMenu = document.getElementById('main-menu');
@@ -504,7 +557,20 @@ function playAgainTwoPlayer() {
 }
 playAgain.addEventListener('click', playAgainTwoPlayer);
 drawPlayAgain.addEventListener('click', playAgainTwoPlayer);
-losePlayAgain.addEventListener('click', playAgainTwoPlayer);
+
+function playAgainSinglePlayer () {
+    singlePlayerScore = 0;
+    computerScore = 0;
+    yourScoreNumber.textContent = 0;
+    computerScoreNumber.textContent = 0;
+    singleRound = 1;
+    updateSingleRound();
+    clearSingleBoard();
+    playerCongra.style.display = 'none';
+    draw.style.display = 'none';
+    lose.style.display = 'none';
+}
+losePlayAgain.addEventListener('click', playAgainSinglePlayer);
 
 
 function goToMainMenu() {
@@ -512,6 +578,7 @@ function goToMainMenu() {
     draw.style.display = 'none';
     lose.style.display = 'none';
     twoGame.style.display = 'none';
+    singleGame.style.display = 'none';
     homeScreen.style.display = 'flex';
 }
 mainMenu.addEventListener('click', goToMainMenu);
@@ -554,6 +621,21 @@ restartTouch.addEventListener('click', function () {
     restartSec.style.display = 'none';
     clearBoard();
     twoTurns.innerHTML = '';
+    round = 1;
+    updateRound();
+    singleRound = 1;
+    updateSingleRound();
+    clearSingleBoard();
+    singleTurns.innerHTML = '';
+    singlePlayerScore = 0;
+    computerScore = 0;
+    yourScoreNumber.textContent = 0;
+    computerScoreNumber.textContent = 0;
+    player1Score = 0;
+    player2Score = 0;
+    play1Score.textContent = 0;
+    play2Score.textContent = 0;
+
 });
 
 resetTouch.addEventListener('click', function () {
