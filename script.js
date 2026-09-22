@@ -102,7 +102,6 @@ singleStart.addEventListener('click', function () {
 });
 
 
-
 singleBoxes.forEach(function (box, index) {
     box.addEventListener('click', function () {
         playerMove(index);
